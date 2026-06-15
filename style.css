@@ -31,8 +31,8 @@ body {
 }
 
 .profile-photo {
-  width: 64px;          /* <<< controlled size */
-  height: 64px;
+  width: 88px;          /* <<< controlled size */
+  height: 88px;
   border-radius: 50%;
   object-fit: cover;
   flex-shrink: 0;
@@ -73,6 +73,7 @@ a:hover {
 }
 
 /* ---------- Lists ---------- */
+.section-list,
 .project-list {
   padding-left: 20px;
 }
