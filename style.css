@@ -1,68 +1,105 @@
-/* ---------- Base ---------- */
+/* ==========================================================
+   BASE
+   ========================================================== */
+
 * {
   box-sizing: border-box;
 }
 
 body {
   margin: 0;
+
   background-color: #f7f9fc;
   color: #1f2933;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont,
-               "Segoe UI", Roboto, sans-serif;
+
+  font-family:
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Roboto,
+    sans-serif;
+
   line-height: 1.6;
 }
 
-/* ---------- Page container ---------- */
+
+/* ==========================================================
+   PAGE
+   ========================================================== */
+
 .page {
   max-width: 900px;
+
   margin: 0 auto;
   padding: 48px 24px;
 }
 
-/* ---------- Header ---------- */
+
+/* ==========================================================
+   HEADER
+   ========================================================== */
+
 .site-header {
   display: flex;
   align-items: center;
+
   gap: 20px;
 
   padding-bottom: 24px;
   margin-bottom: 32px;
+
   border-bottom: 1px solid #e5e7eb;
 }
 
 .profile-photo {
-  width: 88px;          /* <<< controlled size */
+  width: 88px;
   height: 88px;
+
   border-radius: 50%;
+
   object-fit: cover;
   flex-shrink: 0;
 }
 
 .header-text h1 {
   margin: 0;
+
   font-size: 1.9rem;
   font-weight: 600;
 }
 
 .header-text p {
   margin: 4px 0 0;
+
   color: #4b5563;
+
   font-size: 1rem;
 }
 
-/* ---------- Sections ---------- */
+
+/* ==========================================================
+   SECTIONS
+   ========================================================== */
+
 section {
   margin-bottom: 32px;
 }
 
 h2 {
   margin-bottom: 12px;
+
+  color: #1f3a5f;
+
   font-size: 1.3rem;
   font-weight: 600;
-  color: #1f3a5f;
 }
 
-/* ---------- Links ---------- */
+
+/* ==========================================================
+   LINKS
+   ========================================================== */
+
 a {
   color: #1f3a5f;
   text-decoration: none;
@@ -72,7 +109,11 @@ a:hover {
   text-decoration: underline;
 }
 
-/* ---------- Lists ---------- */
+
+/* ==========================================================
+   LISTS
+   ========================================================== */
+
 .section-list,
 .project-list {
   padding-left: 20px;
@@ -80,4 +121,338 @@ a:hover {
 
 .contact-links {
   font-size: 0.95rem;
+}
+
+
+/* ==========================================================
+   OTHER THINGS I FIND AMAZING
+   ========================================================== */
+
+.amazing-section {
+  margin-top: 38px;
+}
+
+.amazing-intro {
+  max-width: 640px;
+
+  margin-top: -4px;
+  margin-bottom: 20px;
+
+  color: #4b5563;
+
+  font-size: 0.95rem;
+}
+
+
+/* ==========================================================
+   AMAZING GRID
+   ========================================================== */
+
+.amazing-grid {
+  display: grid;
+
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+
+  gap: 16px;
+}
+
+
+/* ==========================================================
+   CARDS
+   ========================================================== */
+
+.amazing-card {
+  overflow: hidden;
+
+  display: flex;
+  flex-direction: column;
+
+  background-color: #ffffff;
+
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+
+  color: #1f2933;
+  text-decoration: none;
+
+  transition:
+    transform 0.15s ease,
+    box-shadow 0.15s ease,
+    border-color 0.15s ease;
+}
+
+.amazing-card:hover {
+  transform: translateY(-2px);
+
+  border-color: #cbd5e1;
+
+  box-shadow:
+    0 6px 18px rgba(31, 58, 95, 0.08);
+
+  text-decoration: none;
+}
+
+
+/* ==========================================================
+   CARD CONTENT
+   ========================================================== */
+
+.amazing-card-content {
+  display: flex;
+  flex-direction: column;
+
+  padding: 18px;
+}
+
+.amazing-card h3 {
+  margin: 6px 0 0;
+
+  color: #1f3a5f;
+
+  font-size: 1.05rem;
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+
+/* ==========================================================
+   ITEM TYPE
+   ========================================================== */
+
+.item-type {
+  color: #6b7280;
+
+  font-size: 0.7rem;
+  font-weight: 600;
+
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+
+/* ==========================================================
+   YOUTUBE VIDEO
+   ========================================================== */
+
+.video-card {
+  grid-column: span 2;
+}
+
+.youtube-preview {
+  position: relative;
+
+  width: 100%;
+
+  aspect-ratio: 16 / 9;
+
+  overflow: hidden;
+
+  background-color: #000000;
+}
+
+.youtube-preview img {
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  object-fit: cover;
+
+  transition: transform 0.25s ease;
+}
+
+.video-card:hover .youtube-preview img {
+  transform: scale(1.015);
+}
+
+
+/* ==========================================================
+   PLAY BUTTON
+   ========================================================== */
+
+.play-button {
+  position: absolute;
+
+  top: 50%;
+  left: 50%;
+
+  transform: translate(-50%, -50%);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 58px;
+  height: 58px;
+
+  padding-left: 4px;
+
+  border-radius: 50%;
+
+  background-color: rgba(0, 0, 0, 0.72);
+
+  color: #ffffff;
+
+  font-size: 22px;
+
+  transition:
+    transform 0.15s ease,
+    background-color 0.15s ease;
+}
+
+.video-card:hover .play-button {
+  transform:
+    translate(-50%, -50%)
+    scale(1.06);
+
+  background-color: rgba(0, 0, 0, 0.84);
+}
+
+
+/* ==========================================================
+   WEBSITE / BOOK CARDS
+   ========================================================== */
+
+.simple-card {
+  min-height: 170px;
+}
+
+.simple-card .amazing-card-content {
+  height: 100%;
+}
+
+
+/* ==========================================================
+   BOOK AUTHOR
+   ========================================================== */
+
+.card-author {
+  margin-top: 5px;
+
+  color: #6b7280;
+
+  font-family: Georgia, "Times New Roman", serif;
+
+  font-size: 0.9rem;
+  font-style: italic;
+}
+
+
+/* ==========================================================
+   CARD LINK
+   ========================================================== */
+
+.visit-link {
+  margin-top: auto;
+  padding-top: 24px;
+
+  color: #1f3a5f;
+
+  font-size: 0.82rem;
+  font-weight: 500;
+}
+
+
+/* ==========================================================
+   POEM
+   ========================================================== */
+
+.poem-card {
+  grid-column: span 2;
+
+  margin-top: 8px;
+  padding: 28px 30px;
+
+  border-top: 1px solid #e5e7eb;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.poem-card blockquote {
+  margin: 14px 0 12px;
+}
+
+.poem-card blockquote p {
+  margin: 0;
+
+  color: #374151;
+
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+
+  font-size: 1.08rem;
+  font-style: italic;
+
+  line-height: 1.75;
+}
+
+.poem-author {
+  color: #6b7280;
+
+  font-size: 0.85rem;
+}
+
+
+/* ==========================================================
+   MOBILE
+   ========================================================== */
+
+@media (max-width: 650px) {
+
+  .page {
+    padding: 32px 20px;
+  }
+
+  .amazing-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .video-card {
+    grid-column: span 1;
+  }
+
+  .poem-card {
+    grid-column: span 1;
+
+    padding: 24px 4px;
+  }
+
+  .simple-card {
+    min-height: auto;
+  }
+
+}
+
+
+/* ==========================================================
+   SMALL MOBILE
+   ========================================================== */
+
+@media (max-width: 480px) {
+
+  .site-header {
+    gap: 16px;
+  }
+
+  .profile-photo {
+    width: 76px;
+    height: 76px;
+  }
+
+  .header-text h1 {
+    font-size: 1.65rem;
+  }
+
+  .play-button {
+    width: 50px;
+    height: 50px;
+
+    font-size: 19px;
+  }
+
+  .poem-card blockquote p {
+    font-size: 1rem;
+  }
+
 }
